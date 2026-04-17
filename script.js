@@ -78,7 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function setupForm(form) {
     if (!form) return;
 
-    const inputs = form.querySelectorAll('input:not([type="hidden"]):not([type="checkbox"]):not([name="bot-field"]), select, textarea');
+    const inputs = form.querySelectorAll(
+      'input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([name="bot-field"]), select, textarea'
+    );
     inputs.forEach(field => {
       field.addEventListener('blur', () => validateField(field));
       field.addEventListener('input', () => {
@@ -99,11 +101,29 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    form.addEventListener('submit', e => {
+    const radioGroups = {};
+    form.querySelectorAll('input[type="radio"][required]').forEach(r => {
+      if (!radioGroups[r.name]) radioGroups[r.name] = [];
+      radioGroups[r.name].push(r);
+    });
+    Object.values(radioGroups).forEach(radios => {
+      const fieldset = radios[0].closest('fieldset');
+      const errorEl = fieldset ? fieldset.querySelector('.form-error') : null;
+      const validate = () => {
+        const checked = radios.some(r => r.checked);
+        if (errorEl) {
+          errorEl.textContent = checked ? '' : 'Bitte wählen Sie eine Option.';
+          errorEl.classList.toggle('visible', !checked);
+        }
+        return checked;
+      };
+      radios.forEach(r => r.addEventListener('change', validate));
+    });
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
       let allValid = true;
-      inputs.forEach(field => {
-        if (!validateField(field)) allValid = false;
-      });
+      inputs.forEach(field => { if (!validateField(field)) allValid = false; });
       checkboxes.forEach(cb => {
         if (!cb.checked) {
           allValid = false;
@@ -115,11 +135,41 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       });
+      Object.values(radioGroups).forEach(radios => {
+        const checked = radios.some(r => r.checked);
+        if (!checked) {
+          allValid = false;
+          const fieldset = radios[0].closest('fieldset');
+          const errorEl = fieldset ? fieldset.querySelector('.form-error') : null;
+          if (errorEl) {
+            errorEl.textContent = 'Bitte wählen Sie eine Option.';
+            errorEl.classList.add('visible');
+          }
+        }
+      });
 
       if (!allValid) {
-        e.preventDefault();
         const firstError = form.querySelector('.error, input[required]:invalid');
         if (firstError) firstError.focus();
+        return;
+      }
+
+      const body = new URLSearchParams();
+      body.append('form-name', form.getAttribute('name'));
+      new FormData(form).forEach((v, k) => body.append(k, v));
+      try {
+        const res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body.toString()
+        });
+        if (res.ok) {
+          const successEl = form.querySelector('.form-success');
+          if (successEl) successEl.classList.add('visible');
+          form.reset();
+        }
+      } catch (_) {
+        form.submit();
       }
     });
   }

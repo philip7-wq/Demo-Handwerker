@@ -1,0 +1,34 @@
+# macOS / OS-Metadaten
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build-Artefakte
+dist/
+build/
+
+# Interner Arbeitsordner — nicht deployen
+/_internal/
+
+# Environment-Dateien
+.env
+.env.local
+.env.*.local
+
+# Temp-Dateien
+*.tmp
+*.temp

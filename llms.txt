@@ -1,0 +1,35 @@
+# Müller Handwerk & Notdienst
+
+Meisterbetrieb für Sanitär, Heizung und Reparaturen in Nürnberg — inkl. 24/7 Notdienst bei Rohrbruch, Verstopfung und Wasserschäden.
+
+## Über uns
+Müller Handwerk & Notdienst ist ein 2016 gegründeter Meisterbetrieb in Nürnberg. Inhaber und Meister Daniel Müller und sein Team bieten schnelle, saubere und ehrliche Handwerksleistungen für Privatkunden, Vermieter und kleine Gewerbebetriebe im Großraum Nürnberg. Motto: Schnelle Hilfe. Saubere Arbeit. Faire Lösungen.
+
+## Adresse
+Werkstraße 14, 90441 Nürnberg, Deutschland
+
+## Kontakt
+Tel (Tagesgeschäft): +49 911 98765432
+Tel (Notdienst 24/7): +49 176 34567890
+E-Mail: info@mueller-handwerk-demo.de
+Web: https://mueller-handwerk.netlify.app
+
+## Öffnungszeiten
+Mo–Fr: 07:30–18:00 Uhr
+Sa: 08:00–13:00 Uhr
+So: Geschlossen
+Notdienst: 24/7 erreichbar
+
+## Leistungen
+- Sanitär & Installation (Badsanierung, Rohrleitungen, Kanalreinigung)
+- Heizung & Wartung (Gas-Brennwert, Wärmepumpe, Jahreswartung)
+- Reparaturen & Notdienst (Rohrbruch, Verstopfung, Wasserschäden)
+
+## Einsatzgebiet
+Nürnberg, Fürth, Erlangen, Schwabach und Umgebung bis 40 km
+
+## Wichtige Seiten
+- https://mueller-handwerk.netlify.app/leistungen.html
+- https://mueller-handwerk.netlify.app/notdienst.html
+- https://mueller-handwerk.netlify.app/kontakt.html
+- https://mueller-handwerk.netlify.app/ueber-uns.html

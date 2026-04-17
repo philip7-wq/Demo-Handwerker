@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 40" fill="none">
+  <!-- M icon: amber square with M letter -->
+  <rect x="0" y="4" width="32" height="32" rx="4" fill="#FDE68A"/>
+  <text x="16" y="26" font-family="system-ui, sans-serif" font-weight="700" font-size="18" fill="#0D2C54" text-anchor="middle">M</text>
+  <!-- Wordmark on dark background -->
+  <text x="42" y="16" font-family="system-ui, sans-serif" font-weight="700" font-size="13" fill="#FFFFFF" letter-spacing="-0.2">Müller Handwerk</text>
+  <text x="42" y="32" font-family="system-ui, sans-serif" font-weight="400" font-size="11" fill="rgba(255,255,255,0.65)" letter-spacing="0.2">&amp; Notdienst</text>
+</svg>

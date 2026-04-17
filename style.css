@@ -450,9 +450,14 @@ a {
 }
 
 @media (max-width: 1023px) {
+  .site-logo {
+    max-width: 36px;
+    overflow: hidden;
+  }
   .site-logo img {
-    max-width: 160px;
-    height: auto;
+    height: 36px;
+    width: auto;
+    max-width: none;
   }
   .site-nav {
     gap: var(--space-2);

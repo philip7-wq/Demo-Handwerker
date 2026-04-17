@@ -12,7 +12,7 @@ Werkstraße 14, 90441 Nürnberg, Deutschland
 Tel (Tagesgeschäft): +49 911 98765432
 Tel (Notdienst 24/7): +49 176 34567890
 E-Mail: info@mueller-handwerk-demo.de
-Web: https://mueller-handwerk.netlify.app
+Web: https://handwerkerdemo.netlify.app
 
 ## Öffnungszeiten
 Mo–Fr: 07:30–18:00 Uhr
@@ -29,7 +29,7 @@ Notdienst: 24/7 erreichbar
 Nürnberg, Fürth, Erlangen, Schwabach und Umgebung bis 40 km
 
 ## Wichtige Seiten
-- https://mueller-handwerk.netlify.app/leistungen.html
-- https://mueller-handwerk.netlify.app/notdienst.html
-- https://mueller-handwerk.netlify.app/kontakt.html
-- https://mueller-handwerk.netlify.app/ueber-uns.html
+- https://handwerkerdemo.netlify.app/leistungen.html
+- https://handwerkerdemo.netlify.app/notdienst.html
+- https://handwerkerdemo.netlify.app/kontakt.html
+- https://handwerkerdemo.netlify.app/ueber-uns.html
